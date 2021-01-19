@@ -16,6 +16,7 @@ ul, h1, h2, h3, h4, li, ol, div, p
 
 a
   text-decoration: none
+  transition: all 0.3s
 
 li a
   color: #000
@@ -47,6 +48,7 @@ input
   border-radius: 21px
   box-sizing: border-box
   font-family: Montserrat
+  outline: none
 
 button[type="submit"]
   font-family: Montserrat
@@ -59,6 +61,7 @@ button[type="submit"]
   border: 0
   margin-left: 30px
   text-transform: uppercase
+  outline: none
 
 .area
   background-color: #f4f4f4
@@ -101,6 +104,7 @@ button[type="submit"]
   margin: 0 auto
   display: flex
   align-items: center
+  font-weight: bold
 
 .menu__list li
   margin-left: 34px
@@ -118,6 +122,11 @@ button[type="submit"]
   border-radius: 19px
   color: #fff
   text-decoration: none
+  font-weight: bold
+  transition: all 0.5s
+
+.header__buy-button:hover
+  background-color: #726397
 
 .hero
   padding-top: 104px
@@ -172,6 +181,10 @@ button[type="submit"]
   margin-top: -30px
   font-size: 21px
   font-weight: bold
+  transition: all 0.5s
+
+.download-button:hover
+  background-color: #726397
 
 .download__container p
   text-align: center
@@ -190,8 +203,13 @@ button[type="submit"]
   line-height: 32px
 
 .download__follow
-  display: flex
-  justify-content: center
+  display: block
+  background-size: cover
+  background: url(../images/img-social-placeholder-01.png) 50% 50% no-repeat
+  width: 365px
+  height: 26px
+  margin: 0 auto
+  margin-top: 32px
 
 .advantages
   position: relative
@@ -252,7 +270,18 @@ button[type="submit"]
 .companies
   background: url(../images/img-decor-02.jpg) 50% 50% no-repeat
   background-size: cover
-  padding: 90px 0 70px
+  padding: 90px 0
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.companies:after
+  content: ''
+  position: absolute
+  bottom: 0
+  background: #000
+  height: 1px
 
 .companies__container
   position: relative
@@ -261,7 +290,7 @@ button[type="submit"]
   content: ''
   width: 1170px
   height: 1px
-  background-color: #fff
+  background-color: rgba(102, 74, 102, 0.6)
   position: absolute
   bottom: 0
 
@@ -294,15 +323,18 @@ button[type="submit"]
   color: #fff
 
 .pricing
-  background: url(../images/img-decor-02.jpg) 50% 50% no-repeat
+  font-family: Montserrat
+  background: url(../images/img-decor-03.jpg) 50% 50% no-repeat
   background-size: cover
   padding: 90px 0 70px
+  margin-top: -25px
 
 .pricing__container
-  padding: 50px 0 
+  padding: 0 0 50px
 
 .pricing__title
   margin-bottom: 70px
+  color: #e3dfed
 
 .pricing__list
   display: flex
@@ -315,7 +347,6 @@ button[type="submit"]
   margin: 0 3px
 
 .plan
-  height: 500px
   display: flex
   flex-direction: column
   background-color: rgba(255, 255, 255, 0.1)
@@ -325,16 +356,77 @@ button[type="submit"]
   background-color: rgba(255, 255, 255, 0.05)
 
 .plan__name
+  font-size: 21px
   color: #fff
+  font-weight: 500
+  text-transform: uppercase
 
 .plan__bottom-part
   display: flex
   flex-direction: column
   align-items: center
+  padding: 35px 0
+
+.plan__cost
+  font-family: Montserrat
+  font-size: 82px
+  margin-bottom: 7px
+  color: rgba(255, 255, 255, 0.18)
+
+.plan__cost span
+  font-weight: 700
+  color: #fff
+
+.plan__per-month
+  text-transform: uppercase
+  margin-bottom: 43px
+  font-size: 14px
+
+.plan__features:before
+  content: ''
+  background-color: #8d81ac
+  width: 60px
+  height: 5px
+  top: 0
+  left: calc((100% - 60px) / 2)
+  position: absolute
+
+.plan__features
+  position: relative
+  padding: 37px 0 22px
+  min-height: 117px
+
+.feature
+  height: 28px
+
+.feature__text
+  font-family: Montserrat
+  color: #fff
+  font-size: 16px
+  text-align: center
 
 .pricing__license
   width: 900px / 1170px * 100%
   margin: 0 auto
+
+.plan__buy-button
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 8px 40px
+  height: 42px
+  background-color: rgba(255, 255, 255, 0.15)
+  margin-bottom: 7px
+  border-radius: 40px
+  color: #fff
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 15px
+  transition: all 0.3s
+
+.plan__buy-button:hover
+  background-color: rgba(255, 255, 255, 0.4)
+  color: #fff
 
 .newsletter__container
   padding: 70px 0
